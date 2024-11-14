@@ -10,8 +10,7 @@ export async function generateMetadata(
 ) {
     const t = await getTranslations();
     const {person, about, social } = renderContent(t);
-	const title = about.title;
-	const description = about.description;
+	const {title, description} = about;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {
@@ -81,7 +80,7 @@ export default function About(
                         jobTitle: person.role,
                         description: about.intro.description,
                         url: `https://${baseURL}/about`,
-                        image: `${baseURL}/images/${person.avatar}`,
+                        image: `${baseURL}/images/arielfoto.jpg`,
                         sameAs: social
                             .filter((item) => item.link && !item.link.startsWith('mailto:')) // Filter out empty links and email links
                             .map((item) => item.link),
@@ -111,7 +110,7 @@ export default function About(
                         minWidth="160" paddingX="l" paddingBottom="xl" gap="m"
                         flex={3} direction="column" alignItems="center">
                         <Avatar
-                            src={person.avatar}
+                            src={`/images/arielfoto.jpg`}
                             size="xl"/>
                         <Flex
                             gap="8"

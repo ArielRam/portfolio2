@@ -14,8 +14,8 @@ export async function generateMetadata(
 ) {
 	const t = await getTranslations();
     const { home } = renderContent(t);
-	const title = home.title;
-	const description = home.description;
+	const {title} = home;
+	const description = home;
 	const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
 
 	return {

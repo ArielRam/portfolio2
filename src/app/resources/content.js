@@ -1,13 +1,13 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Ariel',
+    lastName:  'Ramirez',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
-    avatar:    '/images/avatar.jpg',
+    role:      'Software developer',
+    avatar:    '/images/arielfoto.jpg',
     location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
 }
@@ -32,14 +32,9 @@ const social = [
         link: 'https://www.linkedin.com/company/once-ui/',
     },
     {
-        name: 'X',
-        icon: 'x',
-        link: '',
-    },
-    {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:ariel.cristino.ramirez@gmail.com',
     },
 ]
 
