@@ -12,24 +12,30 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        # with:
-        #   token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up SSH Agent
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
+      - name: Debug SSH Connection
+        run: |
+          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP echo "SSH connection successful"
+        shell: bash
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+
       - name: Deploy Application
         run: |
-          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << 'EOF'
-              cd $PROJECT_PATH
-              git pull
-              npm install
-              npm run build
-              pm2 restart portfolio-app
-            EOF
-        shell: /usr/bin/bash -e {0}
+          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP <<EOF
+          cd $PROJECT_PATH
+          git pull origin main
+          npm install
+          npm run build
+          pm2 restart portfolio-app
+          EOF
+        shell: bash
         env:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SERVER_IP: ${{ secrets.SERVER_IP }}
