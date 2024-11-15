@@ -12,14 +12,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        # with:
+        #   token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up SSH Agent
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
-
-      - name: Add GitHub.com to known_hosts
-        run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      
+      - name: Set correct SSH URL
+          run: git remote set-url origin git@github.com:ArielRam/portfolio2.git      
 
       - name: Deploy Application
         run: |
