@@ -1,4 +1,4 @@
-name: Deploy to Lightsail
+name: Deploy
 
 on:
   push:
@@ -10,24 +10,28 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SAIL_KEY }}  # Usa el secret de la clave privada
+      - name: Set up SSH Agent
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_SSH_KEY }}
 
-    - name: Deploy to Lightsail
-      env:
-        SERVER_USER: ${{ secrets.SERVER_USER }}  # Usa el secret del usuario
-        SERVER_IP: ${{ secrets.SERVER_IP }}      # Usa el secret de la IP del servidor
-        PROJECT_PATH: /home/admin/portfolio2
-      run: |
-        ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << 'EOF'
-          cd $PROJECT_PATH
-          git pull origin main
-          npm install
-          npm run build
-          pm2 restart portfolio-app
-        EOF
+      - name: Add GitHub.com to known_hosts
+        run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+
+      - name: Deploy Application
+        run: |
+          ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP << 'EOF'
+              cd $PROJECT_PATH
+              git pull origin main
+              npm install
+              npm run build
+              pm2 restart portfolio-app
+            EOF
+        shell: /usr/bin/bash -e {0}
+        env:
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          PROJECT_PATH: /home/admin/portfolio2/
