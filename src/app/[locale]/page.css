@@ -1,0 +1,13 @@
+.icon-container {
+    display: flex;
+    gap: 20px;
+    justify-content: left;
+}
+
+.icon-container svg {
+transition: transform 0.3s ease;
+}
+
+.icon-container svg:hover {
+transform: scale(1.1);
+}

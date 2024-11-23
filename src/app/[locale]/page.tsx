@@ -3,6 +3,9 @@ import React from 'react';
 import { Heading, Flex, Text, Button,  Avatar, RevealFx, Arrow } from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 
+import { FaReact, FaNodeJs, FaPhp, FaPython, FaLaravel , FaDatabase} from 'react-icons/fa'; // Ejemplo de íconos de React, Node.js, Java y Python
+import './page.css'; 
+
 import { baseURL, routes, renderContent } from '@/app/resources'; 
 import { Mailchimp } from '@/components';
 import { Posts } from '@/components/blog/Posts';
@@ -100,6 +103,15 @@ export default function Home(
 								</Text>
 							</Flex>
 						</RevealFx>
+                        <RevealFx translateY="12" delay={0.4}>
+                        <div className="icon-container">
+                            <FaPhp size={30} title="Php Codeigniter" />
+                            <FaLaravel size={30} title="Laravel" />
+                            <FaDatabase size={30} title="Database" />
+                            <FaReact size={30} title="React" />
+                            <FaNodeJs size={30} title="Node.js / Javascript" />
+                        </div>
+                    </RevealFx>
 						<RevealFx translateY="12" delay={0.4}>
 							<Flex fillWidth>
 								<Button

@@ -1,15 +1,15 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Cristino Ariel',
+    firstName: 'Ariel',
     lastName:  'Ramirez',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Software developer fullstack',
+    role:      'Full Stack developer',
     avatar:    '/images/arielfoto.jpg',
     location:  'America/Lima',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Spanish']  // optional: Leave the array empty if you don't want to display languages
+    languages: ['Spanish', 'English']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
@@ -34,16 +34,16 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:ariel.cristino.ramirez@gmail.com',
+        link: 'mailto:ariel.liquid@gmail.com',
     },
 ]
 
 const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
-    description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Fullstack Developer</>,
-    subline: <>I'm Ariel, a software developer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    description: `Portfolio website${person.role}`,
+    headline: <>Full Stack Developer</>,
+    subline: <>I'm Ariel, an Argentine <InlineCode>Freelancer</InlineCode> software developer with over 8 years of experience in full-stack development. <br /> Lets create valuable software.</>
 }
 
 const about = {
@@ -59,57 +59,180 @@ const about = {
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Meeting+with+me&details=Click+the+link+to+join+the+call+with+me+at+ariel.liquid@gmail.com&location=https://meet.google.com/aqu-egxk-jrx&dates=20241123T120000Z/20241123T123000Z'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>resumen</>
+        description: <>8 years of experience in Software Development, including team
+            leadership and project planning. Began as a Junior programmer at R2 Software, actively participating in backend
+            development and progressively handling more advanced projects, building a robust skill set. Specialized in PHP,
+            CodeIgniter, Laravel, JavaScript, ReactJS, PostgreSQL with PostGIS, and Linux server administration, with solid experience in web
+            development and geospatial data.
+        </>
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Freelance',
+                timeframe: 'Mar. 2024 - Oct. 2024',
+                role: 'Full Stack developer',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <> Custom web application for survey tracking, response processing, data analysis, indicator calculation, and reporting.
+                    </>,
+                    <> Configured and deployed the infrastructure on Linode with Debian and Apache. 
+                        Implemented HTTPS, configured Apache and domain settings, applied security configurations, and set up the MySQL database.
+                    </>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        src: '/images/projects/safe_travel/STNPS.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/safe_travel/STLine.jpg',
+                        alt: 'Survey Tracking',
                         width: 16,
                         height: 9
                     }
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Freelance',
+                timeframe: 'Sep. 2024 - Nov. 2024',
+                role: 'Full Stack developer',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Development of a web scraper for Zoho Books API integration in Laravel and MySQL.</>,
+                    <> Login and web scraping using Laravel HTTP and cookies. HTML parsing and data extraction. 
+                        Integration and synchronization with ZOHO API. Implementation of OAuth 2.0 and refresh token.
+                    </>
                 ],
-                images: [ ]
-            }
+                images: []
+            },
+            {
+                company: 'Freelance',
+                timeframe: 'Sep. 2024 - Nov. 2024',
+                role: 'Full Stack developer',
+                achievements: [
+                    <> Customized a professional portfolio using Next.js and TypeScript, starting from a template.
+                    </>,
+                    <> Configured and deployed the infrastructure on AWS LightSail, implemented HTTPS, and set up Apache reverse proxy. 
+                        Integrated GitHub Actions for continuous deployment and configured PM2 to ensure the app runs smoothly and continuously. 
+                    </>,
+                ],
+                images: []
+            },
+            {
+                company: 'R2Software',
+                timeframe: 'May. 2016 - Oct. 2023',
+                role: 'Full Stack developer',
+                achievements: [
+                    <> Development of a custom web application for survey tracking and configuration
+                        using Laravel, JavaScript, and MySQL.
+                    </>,
+                ],
+                images: [
+                    {
+                        src: '/images/projects/project-01/EMAHOME.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/EMASELECUNITS.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/EMAEDITGEOM.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
+                company: 'R2Software',
+                timeframe: 'May. 2016 - Oct. 2023',
+                role: 'Full Stack developer',
+                achievements: [
+                    <> Development of a custom web application for survey tracking and configuration
+                        using Laravel, JavaScript, and MySQL.
+                    </>,
+                ],
+                images: [
+                    {
+                        src: '/images/projects/project-01/INFOHOME.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/INFOCUSTOM.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/INFOWELL.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/INFOTABLE.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    }
+
+                ]
+            },
+            {
+                company: 'R2Software',
+                timeframe: 'May. 2016 - Oct. 2023',
+                role: 'Full Stack developer',
+                achievements: [
+                    <> Development of a custom web application for survey tracking and configuration
+                        using Laravel, JavaScript, and MySQL.
+                    </>,
+                ],
+                images: [
+                    {
+                        src: '/images/projects/project-01/ElaineFORM1.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/ElaineFORM2.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/project-01/ElaineRUT.jpg',
+                        alt: 'Survey Tracking',
+                        width: 16,
+                        height: 9
+                    }
+
+                ]
+            },
         ]
     },
     studies: {
-        display: true, // set to false to hide this section
+        display: true,
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
-            },
-            {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Universidad Tecnologia Nacional. UTN',
+                description: <>Technical Degree in Applied Informatics</>,
             }
         ]
     },
@@ -118,34 +241,37 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'PHP - Codeigniter - Laravel',
+                description: <>Experienced in developing scalable web applications, handling backend logic, implementing modern design patterns, and integrating APIs for seamless data exchange and third-party service integration.</>,
+                images: []
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-                images: [
-                    {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                ]
+                title: 'Linux Administration',
+                description: <>Proficient in Linux server management with over 5 years of experience using Debian and Ubuntu. 
+                    Skilled in configuring, maintaining, and troubleshooting server environments.</>,
+                images: []
+            },
+            {
+                title: 'Javascript - React.js - Tailwinds - JQuery - Bootstrap',
+                description: <>Experienced in building responsive and dynamic web interfaces, leveraging modern JavaScript frameworks and libraries for front-end development.</>,
+                images: []
+            },
+            {
+                title: 'PostgreSQL - MySQL - MongoDB',
+                description: <>Capable of database administration, query optimization, and configuration for relational and NoSQL databases.</>,
+                images: []
+            },
+            {
+                title: 'Node.js - Express',
+                description: <>Skilled in developing RESTful APIs from scratch and maintaining existing back-end services for efficient data handling.</>,
+                images: []
+            }
+            ,
+            {
+                title: 'Next.js - TypeScript',
+                description: <>Proficient in developing modern web applications using Next.js and TypeScript, integrating tools like Supabase and Once UI for robust, next-generation solutions.Proficient in developing modern web applications using Next.js and TypeScript, i
+                    ntegrating tools like Supabase and Once UI for robust, next-generation solutions.</>,
+                images: []
             }
         ]
     }

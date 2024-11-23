@@ -1,4 +1,4 @@
-const baseURL = 'demo.magic-portfolio.com'
+const baseURL = 'arieldev.xyz'
 
 // Enable localization
 const i18n = false;
@@ -13,8 +13,8 @@ const routes = {
     '/':        true,
     '/about':   true,
     '/work':    true,
-    '/blog':    true,
-    '/gallery': true,
+    '/blog':    false,
+    '/gallery': false,
 }
 
 // Enable password protection on selected routes
@@ -53,7 +53,7 @@ const style = {
 
 const display = {
     location: true,
-    time:     true
+    time:     false
 }
 
 const mailchimp = {
