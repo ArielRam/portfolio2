@@ -43,7 +43,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website${person.role}`,
     headline: <>Full Stack Developer</>,
-    subline: <>I'm Ariel, an Argentine <InlineCode>Freelancer</InlineCode> software developer with over 8 years of experience in full-stack development. <br /> Lets create valuable software.</>
+    subline: <>Hi, I'm Ariel, a Software Developer specializing in Linux, PHP (Laravel, CodeIgniter), PostgreSQL (PostGIS), and modern JavaScript (ReactJS, NodeJS). <br /> Explore my portfolio and let’s bring your next project to life.</>
 }
 
 const about = {
@@ -64,7 +64,7 @@ const about = {
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>8 years of experience in Software Development, including team
+        description: <>Experienced in Software Development, including team
             leadership and project planning. Began as a Junior programmer at R2 Software, actively participating in backend
             development and progressively handling more advanced projects, building a robust skill set. Specialized in PHP,
             CodeIgniter, Laravel, JavaScript, ReactJS, PostgreSQL with PostGIS, and Linux server administration, with solid experience in web
@@ -133,6 +133,7 @@ const about = {
                 achievements: [
                     <>
                         Development of a Web Application and Android Application for National Crop Survey and Agricultural Yield Estimation.
+                        Collaborated as part of a multidisciplinary team, contributing to both frontend and backend development.
                     </>,
                     <>
                         Utilized PHP, CodeIgniter, PostgreSQL, and RESTful APIs for synchronization with the mobile app. Developed Python scripts for geometry package processing.
@@ -166,6 +167,7 @@ const about = {
                 achievements: [
                     <>
                         Development of a Web Application for Early Detection of Oil Well Alerts.
+                        Collaborated as part of a multidisciplinary team, contributing to both frontend and backend development.
                     </>,
                     <>
                         Utilized ReactJS for the frontend, and PHP, CodeIgniter, and PostgreSQL for data processing.
@@ -207,6 +209,7 @@ const about = {
                 achievements: [
                     <>
                         Development of a Web Application that Allows the Creation of Custom Forms and Survey Routes.
+                        Collaborated as part of a multidisciplinary team, contributing to both frontend and backend development.
                     </>,
                     <>
                         Utilized ReactJS for the frontend, and PHP, CodeIgniter, and PostgreSQL for backend processing. 
@@ -252,36 +255,43 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'PHP - Codeigniter - Laravel',
-                description: <>Experienced in developing scalable web applications, handling backend logic, implementing modern design patterns, and integrating APIs for seamless data exchange and third-party service integration.</>,
+                title: 'PHP - CodeIgniter - Laravel',
+                description: <>Extensive experience in developing scalable and robust web applications, implementing MVC design patterns, and integrating RESTful APIs for seamless data interaction. Adept at maintaining and enhancing legacy systems while modernizing codebases.</>,
                 images: []
             },
             {
                 title: 'Linux Administration',
-                description: <>Proficient in Linux server management with over 5 years of experience using Debian and Ubuntu.
-                    Skilled in configuring, maintaining, and troubleshooting server environments.</>,
+                description: <>Expertise in managing Linux servers, particularly Debian and Ubuntu, with over 5 years of experience. Skilled in server configuration, performance optimization, troubleshooting, and ensuring secure, reliable deployment environments.</>,
                 images: []
             },
             {
-                title: 'Javascript - React.js - Tailwinds - JQuery - Bootstrap',
-                description: <>Experienced in building responsive and dynamic web interfaces, leveraging modern JavaScript frameworks and libraries for front-end development.</>,
+                title: 'JavaScript - React.js - Tailwind CSS - jQuery - Bootstrap',
+                description: <>Proficient in building interactive, responsive web interfaces using modern JavaScript frameworks and libraries. Skilled in creating intuitive user experiences with a focus on design consistency and performance optimization.</>,
                 images: []
             },
             {
-                title: 'PostgreSQL - MySQL - MongoDB',
-                description: <>Capable of database administration, query optimization, and configuration for relational and NoSQL databases.</>,
+                title: 'PostgreSQL - PostGIS - MySQL - MongoDB',
+                description: <>Strong background in database administration and optimization for both relational and NoSQL databases. Specialized in geospatial data handling and analysis with PostGIS, including custom geometries and spatial queries.</>,
                 images: []
             },
             {
-                title: 'Node.js - Express',
-                description: <>Skilled in developing RESTful APIs from scratch and maintaining existing back-end services for efficient data handling.</>,
+                title: 'CI/CD - GitHub Actions',
+                description: <>Experienced in implementing Continuous Integration and Continuous Deployment pipelines using GitHub Actions. </>,
                 images: []
-            }
-            ,
+            },
+            {
+                title: 'Cloud Deployment - AWS Lightsail',
+                description: <>Proficient in deploying and managing applications in AWS Lightsail, ensuring scalable and cost-effective cloud hosting solutions. Experienced in configuring servers, setting up domain names, and optimizing applications for production environments.</>,
+                images: []
+            },
+            {
+                title: 'Node.js - Express.js',
+                description: <>Skilled in developing and maintaining RESTful APIs, focusing on efficient data handling and integration with frontend applications. Experienced in creating scalable backend services to support modern web architectures.</>,
+                images: []
+            },
             {
                 title: 'Next.js - TypeScript',
-                description: <>Proficient in developing modern web applications using Next.js and TypeScript, integrating tools like Supabase and Once UI for robust, next-generation solutions.Proficient in developing modern web applications using Next.js and TypeScript, i
-                    ntegrating tools like Supabase and Once UI for robust, next-generation solutions.</>,
+                description: <>Proficient in building modern, full-stack web applications with Next.js and TypeScript. Experienced in integrating tools like Supabase and Once UI for scalable, feature-rich solutions tailored to business needs.</>,
                 images: []
             }
         ]
