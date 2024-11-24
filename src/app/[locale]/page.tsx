@@ -83,7 +83,8 @@ export default function Home(
 				paddingY="l" gap="m">
 					<Flex
 						direction="column"
-						fillWidth maxWidth="s" gap="m">
+						fillWidth maxWidth="s" gap="m" justifyContent="left">
+                            
 						<RevealFx
 							translateY="4">
 							<Heading

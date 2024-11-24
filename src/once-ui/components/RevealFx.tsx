@@ -78,7 +78,7 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(({
 	return (
 		<Flex
 			fillWidth
-			justifyContent="center"
+			justifyContent="left"
 			ref={ref}
 			aria-hidden="true"
 			style={revealStyle}
