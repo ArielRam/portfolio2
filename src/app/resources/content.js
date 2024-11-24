@@ -2,18 +2,18 @@ import { InlineCode } from "@/once-ui/components";
 
 const person = {
     firstName: 'Ariel',
-    lastName:  'Ramirez',
+    lastName: 'Ramirez',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Full Stack developer',
-    avatar:    '/images/arielfoto.jpg',
-    location:  'America/Lima',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    role: 'Full Stack developer',
+    avatar: '/images/arielfoto.jpg',
+    location: 'America/Lima',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['Spanish', 'English']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
 }
@@ -82,11 +82,11 @@ const about = {
                 achievements: [
                     <> Custom web application for survey tracking, response processing, data analysis, indicator calculation, and reporting.
                     </>,
-                    <> Configured and deployed the infrastructure on Linode with Debian and Apache. 
+                    <> Configured and deployed the infrastructure on Linode with Debian and Apache.
                         Implemented HTTPS, configured Apache and domain settings, applied security configurations, and set up the MySQL database.
                     </>
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
+                images: [ 
                     {
                         src: '/images/projects/safe_travel/STNPS.jpg',
                         alt: 'Survey Tracking',
@@ -107,7 +107,7 @@ const about = {
                 role: 'Full Stack developer',
                 achievements: [
                     <>Development of a web scraper for Zoho Books API integration in Laravel and MySQL.</>,
-                    <> Login and web scraping using Laravel HTTP and cookies. HTML parsing and data extraction. 
+                    <> Login and web scraping using Laravel HTTP and cookies. HTML parsing and data extraction.
                         Integration and synchronization with ZOHO API. Implementation of OAuth 2.0 and refresh token.
                     </>
                 ],
@@ -120,8 +120,8 @@ const about = {
                 achievements: [
                     <> Customized a professional portfolio using Next.js and TypeScript, starting from a template.
                     </>,
-                    <> Configured and deployed the infrastructure on AWS LightSail, implemented HTTPS, and set up Apache reverse proxy. 
-                        Integrated GitHub Actions for continuous deployment and configured PM2 to ensure the app runs smoothly and continuously. 
+                    <> Configured and deployed the infrastructure on AWS LightSail, implemented HTTPS, and set up Apache reverse proxy.
+                        Integrated GitHub Actions for continuous deployment and configured PM2 to ensure the app runs smoothly and continuously.
                     </>,
                 ],
                 images: []
@@ -131,9 +131,12 @@ const about = {
                 timeframe: 'May. 2016 - Oct. 2023',
                 role: 'Full Stack developer',
                 achievements: [
-                    <> Development of a custom web application for survey tracking and configuration
-                        using Laravel, JavaScript, and MySQL.
+                    <>
+                        Development of a Web Application and Android Application for National Crop Survey and Agricultural Yield Estimation.
                     </>,
+                    <>
+                        Utilized PHP, CodeIgniter, PostgreSQL, and RESTful APIs for synchronization with the mobile app. Developed Python scripts for geometry package processing.
+                    </>
                 ],
                 images: [
                     {
@@ -161,9 +164,13 @@ const about = {
                 timeframe: 'May. 2016 - Oct. 2023',
                 role: 'Full Stack developer',
                 achievements: [
-                    <> Development of a custom web application for survey tracking and configuration
-                        using Laravel, JavaScript, and MySQL.
+                    <>
+                        Development of a Web Application for Early Detection of Oil Well Alerts.
                     </>,
+                    <>
+                        Utilized ReactJS for the frontend, and PHP, CodeIgniter, and PostgreSQL for data processing.
+                        Integrated Highcharts library for custom graphs to meet the specific requirements.
+                    </>
                 ],
                 images: [
                     {
@@ -198,9 +205,13 @@ const about = {
                 timeframe: 'May. 2016 - Oct. 2023',
                 role: 'Full Stack developer',
                 achievements: [
-                    <> Development of a custom web application for survey tracking and configuration
-                        using Laravel, JavaScript, and MySQL.
+                    <>
+                        Development of a Web Application that Allows the Creation of Custom Forms and Survey Routes.
                     </>,
+                    <>
+                        Utilized ReactJS for the frontend, and PHP, CodeIgniter, and PostgreSQL for backend processing. 
+                        Developed a RESTful API for managing all entities.
+                    </>
                 ],
                 images: [
                     {
@@ -247,7 +258,7 @@ const about = {
             },
             {
                 title: 'Linux Administration',
-                description: <>Proficient in Linux server management with over 5 years of experience using Debian and Ubuntu. 
+                description: <>Proficient in Linux server management with over 5 years of experience using Debian and Ubuntu.
                     Skilled in configuring, maintaining, and troubleshooting server environments.</>,
                 images: []
             },
@@ -299,73 +310,73 @@ const gallery = {
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
+        {
+            src: '/images/gallery/img-01.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-02.jpg', 
+        {
+            src: '/images/gallery/img-02.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-03.jpg', 
+        {
+            src: '/images/gallery/img-03.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-04.jpg', 
+        {
+            src: '/images/gallery/img-04.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-05.jpg', 
+        {
+            src: '/images/gallery/img-05.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-06.jpg', 
+        {
+            src: '/images/gallery/img-06.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-07.jpg', 
+        {
+            src: '/images/gallery/img-07.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-08.jpg', 
+        {
+            src: '/images/gallery/img-08.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-09.jpg', 
+        {
+            src: '/images/gallery/img-09.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-10.jpg', 
+        {
+            src: '/images/gallery/img-10.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-11.jpg', 
+        {
+            src: '/images/gallery/img-11.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-12.jpg', 
+        {
+            src: '/images/gallery/img-12.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-13.jpg', 
+        {
+            src: '/images/gallery/img-13.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-14.jpg', 
+        {
+            src: '/images/gallery/img-14.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
